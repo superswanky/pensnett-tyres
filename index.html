@@ -1,0 +1,2504 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensnett Tyres - Premium Tyre Services in Dudley</title>
+    <meta name="description" content="Pensnett Tyres - Professional tyre services, fitting, and repairs in Dudley. New, part-worn & budget tyres. Call 07779 303 235">
+    <meta name="keywords" content="tyres Dudley, Pensnett tyres, tyre fitting, mobile tyre service, wheel alignment, puncture repair">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "Pensnett Tyres",
+      "description": "Professional tyre services in Dudley",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dudley",
+        "addressCountry": "UK"
+      },
+      "telephone": "07779 303 235",
+      "openingHours": [
+        "Mo-Fr 08:00-18:00",
+        "Sa 08:00-16:00",
+        "Su 10:00-14:00"
+      ],
+      "url": "https://pensnettyres.example.com"
+    }
+    </script>
+    <style>
+        :root {
+            --primary: #d40000;
+            --secondary: #333333;
+            --accent: #ffcc00;
+            --light: #f8f8f8;
+            --dark: #1a1a1a;
+            --success: #28a745;
+            --warning: #ffc107;
+            --info: #17a2b8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--secondary);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .logo-text span {
+            color: var(--primary);
+        }
+        
+        .tagline {
+            font-size: 0.9rem;
+            color: var(--accent);
+            margin-top: 0.2rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-item i {
+            color: var(--accent);
+        }
+        
+        .emergency-badge {
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-left: 0.5rem;
+        }
+        
+        nav {
+            padding-top: 1rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--accent);
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .user-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .auth-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .auth-btn:hover {
+            background: #b30000;
+        }
+        
+        .auth-btn.outline {
+            background: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+        
+        .auth-btn.outline:hover {
+            background: var(--accent);
+            color: var(--dark);
+        }
+        
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: white;
+        }
+        
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--dark);
+        }
+        
+        /* Emergency Banner */
+        .emergency-banner {
+            background: linear-gradient(45deg, var(--primary), #ff6b6b);
+            color: white;
+            padding: 0.8rem 0;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .emergency-banner a {
+            color: var(--accent);
+            text-decoration: none;
+            margin-left: 0.5rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1603712610497-4c3708207c5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+        }
+        
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .hero-feature i {
+            color: var(--accent);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover {
+            background-color: #b30000;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+            color: var(--dark);
+        }
+        
+        .btn-accent:hover {
+            background-color: #e6b800;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: var(--dark);
+        }
+        
+        /* Dashboard Sections */
+        .dashboard-section {
+            display: none;
+            padding: 2rem 0;
+        }
+        
+        .dashboard-section.active {
+            display: block;
+        }
+        
+        .dashboard-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .dashboard-nav {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .dashboard-nav-btn {
+            background: white;
+            border: 2px solid var(--secondary);
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .dashboard-nav-btn.active, .dashboard-nav-btn:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        /* Booking System */
+        .booking-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.7rem center;
+            background-size: 1rem;
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border: 1px solid #eee;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        /* Products */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            z-index: 2;
+        }
+        
+        .product-badge.budget {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .product-badge.premium {
+            background: #FF9800;
+            color: white;
+        }
+        
+        .product-badge.part-worn {
+            background: #9C27B0;
+            color: white;
+        }
+        
+        .product-image {
+            height: 200px;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-brand {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+        
+        .product-details {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .product-features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.8rem;
+            color: #666;
+        }
+        
+        .feature-item i {
+            color: var(--primary);
+            font-size: 0.7rem;
+        }
+        
+        .product-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1rem;
+        }
+        
+        .savings {
+            color: var(--success);
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .add-to-cart {
+            width: 100%;
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .add-to-cart:hover {
+            background-color: var(--primary);
+        }
+        
+        /* Admin Dashboard */
+        .admin-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .admin-table {
+            width: 100%;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .admin-table th, .admin-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .admin-table th {
+            background: var(--light);
+            font-weight: 600;
+        }
+        
+        .status-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .status-confirmed {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+        
+        .status-completed {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        /* User Dashboard */
+        .user-bookings {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .booking-card {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .booking-card:last-child {
+            border-bottom: none;
+        }
+        
+        .booking-info h4 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .booking-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .action-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .action-btn.primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .action-btn.secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        /* Modal Systems */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 8px;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #777;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-section a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: var(--accent);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .user-controls {
+                margin-top: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .dashboard-nav {
+                flex-direction: column;
+            }
+        }
+        
+        /* Animations */
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1001;
+            animation: slideInRight 0.3s ease-out;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            max-width: 400px;
+        }
+        
+        .notification.success {
+            background-color: var(--success);
+        }
+        
+        .notification.error {
+            background-color: #dc3545;
+        }
+        
+        .notification.warning {
+            background-color: var(--warning);
+            color: var(--dark);
+        }
+        
+        /* New Styles for Enhanced Features */
+        .loading-spinner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            color: var(--primary);
+        }
+        
+        .loading-spinner i {
+            margin-right: 0.5rem;
+        }
+        
+        .advanced-filters {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .filter-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .filter-group {
+            margin-bottom: 1rem;
+        }
+        
+        .filter-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .availability-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .available {
+            color: var(--success);
+        }
+        
+        .unavailable {
+            color: var(--primary);
+        }
+        
+        .time-slot {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0.25rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .time-slot.selected {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .time-slot.unavailable {
+            background-color: #f8f8f8;
+            color: #999;
+            cursor: not-allowed;
+        }
+        
+        .cart-indicator {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <i class="fas fa-exclamation-triangle"></i>
+        Emergency tyre service available - Call <a href="tel:07779303235">07779 303 235</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-tire"></i>
+                    </div>
+                    <div>
+                        <div class="logo-text">Pensnett <span>Tyres</span></div>
+                        <div class="tagline">Professional Tyre Services</div>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>07779 303 235</span>
+                        <span class="emergency-badge">24/7</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>ahandcarwash@gmail.com</span>
+                    </div>
+                </div>
+                <div class="user-controls" id="userControls">
+                    <!-- Dynamic content - will be populated by JavaScript -->
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" data-section="home">Home</a></li>
+                    <li><a href="#" data-section="services">Services</a></li>
+                    <li><a href="#" data-section="products">Products</a></li>
+                    <li><a href="#" data-section="booking">Book Service</a></li>
+                    <li><a href="#" data-section="dashboard">My Account</a></li>
+                    <li><a href="#" data-section="admin" id="adminLink" style="display: none;">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="dashboard-section active" id="home">
+        <div class="hero">
+            <div class="container">
+                <h1>Professional Tyre Services in Dudley</h1>
+                <p>Pensnett Tyres offers comprehensive tyre services including fitting, repairs, and wheel alignment. Trust our experienced team for all your tyre needs.</p>
+                
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Free Fitting</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Price Match Promise</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-check"></i>
+                        <span>24/7 Emergency Service</span>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#" class="btn btn-accent" data-section="booking">Book Now</a>
+                    <a href="#" class="btn btn-outline" data-section="services">Our Services</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Services Preview -->
+        <div class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tire"></i>
+                    </div>
+                    <h3>Tyre Fitting</h3>
+                    <p>Professional tyre fitting for all vehicle types. We handle everything from cars to vans.</p>
+                    <button class="btn" style="margin-top: 1rem;" data-section="booking">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Puncture Repair</h3>
+                    <p>Fast and reliable puncture repairs to get you back on the road quickly and safely.</p>
+                    <button class="btn" style="margin-top: 1rem;" data-section="booking">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Wheel Alignment</h3>
+                    <p>Precision wheel alignment to ensure optimal tyre wear and perfect vehicle handling.</p>
+                    <button class="btn" style="margin-top: 1rem;" data-section="booking">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="dashboard-section" id="services">
+        <div class="container" style="padding: 2rem 0;">
+            <h2 class="section-title">Our Services</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tire"></i>
+                    </div>
+                    <h3>New Tyres</h3>
+                    <p>Comprehensive range of new tyres from budget to premium brands. We offer competitive pricing and professional fitting.</p>
+                    <div class="product-price" style="justify-content: center; margin: 1.5rem 0;">
+                        <div class="price">From £35</div>
+                    </div>
+                    <button class="btn" data-section="products">View Tyres</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>Part Worn Tyres</h3>
+                    <p>Quality checked part-worn tyres with plenty of tread life at a fraction of the cost of new tyres.</p>
+                    <div class="product-price" style="justify-content: center; margin: 1.5rem 0;">
+                        <div class="price">From £25</div>
+                    </div>
+                    <button class="btn" data-section="products">View Tyres</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tyre Fitting</h3>
+                    <p>Professional tyre fitting and balancing by experienced technicians. Free with tyre purchase.</p>
+                    <button class="btn" data-section="booking">Book Fitting</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car-crash"></i>
+                    </div>
+                    <h3>Puncture Repair</h3>
+                    <p>Fast and reliable puncture repairs to get you back on the road safely and quickly. Most repairs completed in under 30 minutes.</p>
+                    <button class="btn" data-section="booking">Book Repair</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Wheel Alignment</h3>
+                    <p>Precision wheel alignment to ensure optimal tyre wear and vehicle handling. State-of-the-art equipment.</p>
+                    <button class="btn" data-section="booking">Book Alignment</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>Emergency Service</h3>
+                    <p>24/7 emergency tyre service for when you need help on the road. We come to you wherever you are.</p>
+                    <button class="btn" data-section="booking">Request Help</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="dashboard-section" id="products">
+        <div class="container" style="padding: 2rem 0;">
+            <h2 class="section-title">Our Products</h2>
+            
+            <div class="dashboard-nav">
+                <button class="dashboard-nav-btn active" data-filter="all">All Products</button>
+                <button class="dashboard-nav-btn" data-filter="budget">Budget Tyres</button>
+                <button class="dashboard-nav-btn" data-filter="premium">Premium Tyres</button>
+                <button class="dashboard-nav-btn" data-filter="part-worn">Part Worn</button>
+            </div>
+            
+            <!-- Advanced Filters -->
+            <div class="advanced-filters">
+                <h3>Refine Your Search</h3>
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <label for="brandFilter">Brand</label>
+                        <select id="brandFilter" class="form-control">
+                            <option value="">All Brands</option>
+                            <option value="MICHELIN">Michelin</option>
+                            <option value="PIRELLI">Pirelli</option>
+                            <option value="GOODYEAR">Goodyear</option>
+                            <option value="BRIDGESTONE">Bridgestone</option>
+                            <option value="HANKOOK">Hankook</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sizeFilter">Size</label>
+                        <select id="sizeFilter" class="form-control">
+                            <option value="">All Sizes</option>
+                            <option value="15">15"</option>
+                            <option value="16">16"</option>
+                            <option value="17">17"</option>
+                            <option value="18">18"</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="priceFilter">Price Range</label>
+                        <select id="priceFilter" class="form-control">
+                            <option value="">All Prices</option>
+                            <option value="0-50">Under £50</option>
+                            <option value="50-100">£50 - £100</option>
+                            <option value="100-150">£100 - £150</option>
+                            <option value="150+">Over £150</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="products-grid" id="productsContainer">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="dashboard-section" id="booking">
+        <div class="container" style="padding: 2rem 0;">
+            <h2 class="section-title">Book a Service</h2>
+            
+            <div class="booking-form">
+                <form id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="serviceType">Service Type</label>
+                            <select id="serviceType" class="form-control" required>
+                                <option value="">Select a service</option>
+                                <option value="tyre-fitting">Tyre Fitting</option>
+                                <option value="puncture-repair">Puncture Repair</option>
+                                <option value="wheel-alignment">Wheel Alignment</option>
+                                <option value="emergency">Emergency Service</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="vehicleType">Vehicle Type</label>
+                            <select id="vehicleType" class="form-control" required>
+                                <option value="">Select vehicle type</option>
+                                <option value="car">Car</option>
+                                <option value="van">Van</option>
+                                <option value="suv">SUV/4x4</option>
+                                <option value="motorcycle">Motorcycle</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bookingDate">Preferred Date</label>
+                            <input type="date" id="bookingDate" class="form-control" required>
+                            <div class="availability-indicator" id="dateAvailability" style="display: none;">
+                                <i class="fas fa-circle"></i>
+                                <span>Checking availability...</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookingTime">Preferred Time</label>
+                            <div id="timeSlotsContainer">
+                                <select id="bookingTime" class="form-control" required>
+                                    <option value="">Select time</option>
+                                    <option value="08:00">08:00 AM</option>
+                                    <option value="09:00">09:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">01:00 PM</option>
+                                    <option value="14:00">02:00 PM</option>
+                                    <option value="15:00">03:00 PM</option>
+                                    <option value="16:00">04:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customerName">Your Name</label>
+                        <input type="text" id="customerName" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customerPhone">Phone Number</label>
+                            <input type="tel" id="customerPhone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerEmail">Email Address</label>
+                            <input type="email" id="customerEmail" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="specialRequirements">Special Requirements</label>
+                        <textarea id="specialRequirements" class="form-control" rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%;" id="submitBookingBtn">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Dashboard -->
+    <section class="dashboard-section" id="dashboard">
+        <div class="container" style="padding: 2rem 0;">
+            <div class="dashboard-header">
+                <h2 class="section-title">My Account</h2>
+                <div id="dashboardGreeting"></div>
+            </div>
+            
+            <div class="dashboard-nav">
+                <button class="dashboard-nav-btn active" data-tab="bookings">My Bookings</button>
+                <button class="dashboard-nav-btn" data-tab="profile">Profile</button>
+                <button class="dashboard-nav-btn" data-tab="vehicles">My Vehicles</button>
+            </div>
+            
+            <div id="bookingsTab" class="dashboard-tab">
+                <h3>My Bookings</h3>
+                <div class="user-bookings" id="userBookings">
+                    <!-- Bookings will be loaded here -->
+                </div>
+            </div>
+            
+            <div id="profileTab" class="dashboard-tab" style="display: none;">
+                <h3>My Profile</h3>
+                <div class="booking-form">
+                    <form id="profileForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="profileName">Full Name</label>
+                                <input type="text" id="profileName" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="profilePhone">Phone Number</label>
+                                <input type="tel" id="profilePhone" class="form-control">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="profileEmail">Email Address</label>
+                            <input type="email" id="profileEmail" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="profileAddress">Address</label>
+                            <textarea id="profileAddress" class="form-control" rows="3"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Update Profile</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div id="vehiclesTab" class="dashboard-tab" style="display: none;">
+                <h3>My Vehicles</h3>
+                <div class="user-bookings">
+                    <div class="booking-card">
+                        <div class="booking-info">
+                            <h4>Toyota Corolla</h4>
+                            <p>Registration: AB12 CDE</p>
+                            <p>Tyre Size: 195/65 R15</p>
+                        </div>
+                        <div class="booking-actions">
+                            <button class="action-btn secondary">Edit</button>
+                            <button class="action-btn primary" data-section="booking">Book Service</button>
+                        </div>
+                    </div>
+                    <div class="booking-card">
+                        <div class="booking-info">
+                            <h4>Ford Focus</h4>
+                            <p>Registration: FG34 HIJ</p>
+                            <p>Tyre Size: 205/55 R16</p>
+                        </div>
+                        <div class="booking-actions">
+                            <button class="action-btn secondary">Edit</button>
+                            <button class="action-btn primary" data-section="booking">Book Service</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn" style="margin-top: 1rem;">Add Vehicle</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Dashboard -->
+    <section class="dashboard-section" id="admin">
+        <div class="container" style="padding: 2rem 0;">
+            <h2 class="section-title">Admin Dashboard</h2>
+            
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="totalBookings">0</div>
+                    <div class="stat-label">Total Bookings</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="pendingBookings">0</div>
+                    <div class="stat-label">Pending Bookings</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="todayBookings">0</div>
+                    <div class="stat-label">Today's Bookings</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">£<span id="revenue">0</span></div>
+                    <div class="stat-label">Monthly Revenue</div>
+                </div>
+            </div>
+            
+            <div class="dashboard-nav">
+                <button class="dashboard-nav-btn active" data-tab="bookings">Bookings</button>
+                <button class="dashboard-nav-btn" data-tab="inventory">Inventory</button>
+                <button class="dashboard-nav-btn" data-tab="customers">Customers</button>
+                <button class="dashboard-nav-btn" data-tab="settings">Settings</button>
+            </div>
+            
+            <div id="adminBookingsTab" class="admin-tab">
+                <h3>Recent Bookings</h3>
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Customer</th>
+                                <th>Service</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminBookingsTable">
+                            <!-- Bookings will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id="adminInventoryTab" class="admin-tab" style="display: none;">
+                <h3>Inventory Management</h3>
+                <button class="btn" style="margin-bottom: 1rem;">Add New Product</button>
+                <div class="products-grid">
+                    <!-- Inventory items will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pensnett Tyres</h3>
+                    <p>Your local tyre specialists in Dudley offering professional tyre services and repairs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#" data-section="home">Home</a></li>
+                        <li><a href="#" data-section="services">Services</a></li>
+                        <li><a href="#" data-section="products">Products</a></li>
+                        <li><a href="#" data-section="booking">Book Service</a></li>
+                        <li><a href="#" data-section="dashboard">My Account</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 07779 303 235</li>
+                        <li><i class="fas fa-envelope"></i> ahandcarwash@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 8am-6pm</li>
+                        <li><i class="fas fa-clock"></i> Sat: 8am-4pm</li>
+                        <li><i class="fas fa-clock"></i> Sun: 10am-2pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Pensnett Tyres. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modals -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login</h2>
+                <button class="close-modal" data-modal="loginModal">&times;</button>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" class="form-control" required>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Login</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem;">
+                Don't have an account? <a href="#" data-modal="registerModal">Register here</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create Account</h2>
+                <button class="close-modal" data-modal="registerModal">&times;</button>
+            </div>
+            <form id="registerForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="registerFirstName">First Name</label>
+                        <input type="text" id="registerFirstName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerLastName">Last Name</label>
+                        <input type="text" id="registerLastName" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email Address</label>
+                    <input type="email" id="registerEmail" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPhone">Phone Number</label>
+                    <input type="tel" id="registerPhone" class="form-control" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="registerPassword">Password</label>
+                        <input type="password" id="registerPassword" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerConfirmPassword">Confirm Password</label>
+                        <input type="password" id="registerConfirmPassword" class="form-control" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Create Account</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem;">
+                Already have an account? <a href="#" data-modal="loginModal">Login here</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced Storage Manager with error handling
+        const StorageManager = {
+            isAvailable: function() {
+                try {
+                    const test = 'test';
+                    localStorage.setItem(test, test);
+                    localStorage.removeItem(test);
+                    return true;
+                } catch(e) {
+                    console.warn('LocalStorage is not available');
+                    return false;
+                }
+            },
+            
+            save: function(key, data) {
+                if (!this.isAvailable()) return false;
+                
+                try {
+                    localStorage.setItem(key, JSON.stringify(data));
+                    return true;
+                } catch (e) {
+                    console.error('Failed to save data:', e);
+                    return false;
+                }
+            },
+            
+            load: function(key) {
+                if (!this.isAvailable()) return null;
+                
+                try {
+                    const data = localStorage.getItem(key);
+                    return data ? JSON.parse(data) : null;
+                } catch (e) {
+                    console.error('Failed to load data:', e);
+                    return null;
+                }
+            }
+        };
+
+        // Application State
+        const state = {
+            user: null,
+            isAdmin: false,
+            products: [],
+            bookings: [],
+            users: [],
+            cart: [],
+            productsLoaded: false,
+            servicesLoaded: false
+        };
+
+        // DOM Elements
+        const userControls = document.getElementById('userControls');
+        const adminLink = document.getElementById('adminLink');
+        const productsContainer = document.getElementById('productsContainer');
+        const dashboardGreeting = document.getElementById('dashboardGreeting');
+        const userBookings = document.getElementById('userBookings');
+        const adminBookingsTable = document.getElementById('adminBookingsTable');
+
+        // Initialize the application
+        function initApp() {
+            loadStateFromStorage();
+            setupEventListeners();
+            updateUserInterface();
+            
+            // Set minimum date for booking to today
+            const today = new Date().toISOString().split('T')[0];
+            const bookingDate = document.getElementById('bookingDate');
+            if (bookingDate) {
+                bookingDate.min = today;
+            }
+        }
+
+        // Load state from localStorage
+        function loadStateFromStorage() {
+            state.user = StorageManager.load('currentUser');
+            state.bookings = StorageManager.load('bookings') || [];
+            state.cart = StorageManager.load('cart') || [];
+            
+            if (state.user) {
+                state.isAdmin = state.user.email === 'admin@penstyre.com';
+            }
+            
+            // Load products only when needed
+            if (!state.productsLoaded) {
+                loadProducts();
+            }
+        }
+
+        // Setup all event listeners
+        function setupEventListeners() {
+            // Navigation
+            document.querySelectorAll('nav a, [data-section]').forEach(element => {
+                element.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const sectionId = this.getAttribute('data-section');
+                    if (sectionId) {
+                        showSection(sectionId);
+                    }
+                });
+            });
+            
+            // Product filters
+            document.querySelectorAll('.dashboard-nav-btn[data-filter]').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    filterProducts(filter);
+                });
+            });
+            
+            // Dashboard tabs
+            document.querySelectorAll('.dashboard-nav-btn[data-tab]').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const tabName = this.getAttribute('data-tab');
+                    if (this.closest('#dashboard')) {
+                        showDashboardTab(tabName);
+                    } else if (this.closest('#admin')) {
+                        showAdminTab(tabName);
+                    }
+                });
+            });
+            
+            // Modal controls
+            document.querySelectorAll('.close-modal, [data-modal]').forEach(element => {
+                element.addEventListener('click', function() {
+                    const modalId = this.getAttribute('data-modal');
+                    if (modalId) {
+                        if (this.classList.contains('close-modal')) {
+                            closeModal(modalId);
+                        } else {
+                            const currentModal = this.closest('.modal');
+                            if (currentModal) {
+                                closeModal(currentModal.id);
+                            }
+                            showModal(modalId);
+                        }
+                    }
+                });
+            });
+            
+            // Advanced filters
+            document.querySelectorAll('#brandFilter, #sizeFilter, #priceFilter').forEach(filter => {
+                filter.addEventListener('change', applyFilters);
+            });
+            
+            // Booking date change
+            const bookingDate = document.getElementById('bookingDate');
+            if (bookingDate) {
+                bookingDate.addEventListener('change', checkAvailableSlots);
+            }
+            
+            // Form submissions
+            document.getElementById('loginForm')?.addEventListener('submit', handleLogin);
+            document.getElementById('registerForm')?.addEventListener('submit', handleRegister);
+            document.getElementById('bookingForm')?.addEventListener('submit', handleBooking);
+            document.getElementById('profileForm')?.addEventListener('submit', handleProfileUpdate);
+        }
+
+        // Lazy load products when products section is shown
+        function lazyLoadProducts() {
+            if (!state.productsLoaded) {
+                showLoadingState(productsContainer);
+                setTimeout(() => {
+                    loadProducts();
+                    state.productsLoaded = true;
+                }, 500);
+            }
+        }
+
+        // Load products into the products section with professional car tyre images
+        function loadProducts() {
+            // Simulate API call with timeout
+            setTimeout(() => {
+                state.products = [
+                    {
+                        id: 1,
+                        name: 'Energy Saver',
+                        brand: 'MICHELIN',
+                        type: 'premium',
+                        size: '195/65 R15 91T',
+                        price: 89.99,
+                        image: 'https://images.unsplash.com/photo-1554741479-33ee2b1c75f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                        features: ['Fuel Efficient', 'Wet Grip: A', 'Low Noise']
+                    },
+                    {
+                        id: 2,
+                        name: 'Pilot Sport 4',
+                        brand: 'MICHELIN',
+                        type: 'premium',
+                        size: '225/45 R17 91Y',
+                        price: 119.99,
+                        image: 'https://images.unsplash.com/photo-1603712610497-4c3708207c5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                        features: ['Sport Performance', 'Wet Grip: A', 'Precise Handling']
+                    },
+                    {
+                        id: 3,
+                        name: 'P Zero',
+                        brand: 'PIRELLI',
+                        type: 'premium',
+                        size: '235/40 R18 95Y',
+                        price: 139.99,
+                        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                        features: ['Ultra High Performance', 'Sport Handling', 'Premium Compound']
+                    },
+                    {
+                        id: 4,
+                        name: 'Cinturato P7',
+                        brand: 'PIRELLI',
+                        type: 'premium',
+                        size: '205/55 R16 91V',
+                        price: 99.99,
+                        image: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                        features: ['All Season', 'Comfort', 'Eco-Friendly']
+                    },
+                    {
+                        id: 5,
+                        name: 'Eagle F1 Asymmetric 5',
+                        brand: 'GOODYEAR',
+                        type: 'premium',
+                        size: '215/55 R17 94W',
+                        price: 109.99,
+                        image: 'https://images.unsplash.com/photo-1603712610497-4c3708207c5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                        features: ['Sport Performance', 'Excellent Grip', 'Durable']
+                    },
+                    {
+                        id: 6,
+                        name: 'EfficientGrip Performance',
+                        brand: 'GOODYEAR',
+                        type: 'premium',
+                        size: '205/55 R16 91V',
+                        price: 89.99,
+                        image: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                        features: ['Fuel Saving', 'Comfort', 'All Season']
+                    },
+                    {
+                        id: 7,
+                        name: 'Ecopia',
+                        brand: 'BRIDGESTONE',
+                        type: 'premium',
+                        size: '195/65 R15 91H',
+                        price: 79.99,
+                        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                        features: ['Eco-Friendly', 'Fuel Efficient', 'Long Life']
+                    },
+                    {
+                        id: 8,
+                        name: 'Turanza T005',
+                        brand: 'BRIDGESTONE',
+                        type: 'premium',
+                        size: '225/50 R17 94W',
+                        price: 119.99,
+                        image: 'https://images.unsplash.com/photo-1554741479-33ee2b1c75f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                        features: ['Premium Comfort', 'Wet Performance', 'Durable']
+                    },
+                    {
+                        id: 9,
+                        name: 'Kinergy Eco2',
+                        brand: 'HANKOOK',
+                        type: 'budget',
+                        size: '185/65 R15 88T',
+                        price: 49.99,
+                        image: 'https://images.unsplash.com/photo-1603712610497-4c3708207c5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                        features: ['Budget Friendly', 'Fuel Efficient', 'All Season']
+                    },
+                    {
+                        id: 10,
+                        name: 'Ventus Prime3',
+                        brand: 'HANKOOK',
+                        type: 'budget',
+                        size: '205/55 R16 91V',
+                        price: 59.99,
+                        image: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                        features: ['Value Performance', 'Comfort', 'Reliable']
+                    },
+                    {
+                        id: 11,
+                        name: 'Part Worn Premium',
+                        brand: 'VARIOUS PREMIUM',
+                        type: 'part-worn',
+                        size: '205/55 R16 91V',
+                        price: 35.00,
+                        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                        features: ['6-7mm Tread', 'Quality Checked', 'Free Fitting']
+                    },
+                    {
+                        id: 12,
+                        name: 'Part Worn Standard',
+                        brand: 'VARIOUS BRANDS',
+                        type: 'part-worn',
+                        size: '195/65 R15 91T',
+                        price: 25.00,
+                        image: 'https://images.unsplash.com/photo-1554741479-33ee2b1c75f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+                        features: ['5-6mm Tread', 'Fully Inspected', 'Free Fitting']
+                    }
+                ];
+                
+                displayProducts(state.products);
+            }, 800);
+        }
+
+        // Display products in the products container
+        function displayProducts(products) {
+            if (!productsContainer) return;
+            
+            productsContainer.innerHTML = '';
+            
+            if (products.length === 0) {
+                productsContainer.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">No products found matching your criteria.</p>';
+                return;
+            }
+            
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <div class="product-badge ${product.type}">${product.type.charAt(0).toUpperCase() + product.type.slice(1).replace('-', ' ')}</div>
+                    <div class="product-image">
+                        <img src="${product.image}" 
+                             alt="${product.brand} ${product.name} - ${product.size}" 
+                             loading="lazy"
+                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&auto=format'">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">${product.brand}</div>
+                        <h3 class="product-title">${product.name}</h3>
+                        <div class="product-details">${product.size}</div>
+                        <div class="product-features-grid">
+                            ${product.features.map(feature => `
+                                <div class="feature-item"><i class="fas fa-check"></i> ${feature}</div>
+                            `).join('')}
+                        </div>
+                        <div class="product-price">
+                            <div class="price">£${product.price.toFixed(2)}</div>
+                        </div>
+                        <button class="add-to-cart" data-product-id="${product.id}">
+                            Add to Cart
+                        </button>
+                    </div>
+                `;
+                productsContainer.appendChild(productCard);
+            });
+            
+            // Add event listeners to cart buttons
+            productsContainer.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = parseInt(this.getAttribute('data-product-id'));
+                    addToCart(productId);
+                });
+            });
+        }
+
+        // Filter products by type
+        function filterProducts(type) {
+            const buttons = document.querySelectorAll('.dashboard-nav-btn[data-filter]');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            if (type === 'all') {
+                displayProducts(state.products);
+                return;
+            }
+            
+            const filteredProducts = state.products.filter(product => product.type === type);
+            displayProducts(filteredProducts);
+        }
+
+        // Apply advanced filters
+        function applyFilters() {
+            const brandFilter = document.getElementById('brandFilter').value;
+            const sizeFilter = document.getElementById('sizeFilter').value;
+            const priceFilter = document.getElementById('priceFilter').value;
+            
+            const filteredProducts = state.products.filter(product => {
+                const matchesBrand = !brandFilter || product.brand === brandFilter;
+                const matchesSize = !sizeFilter || product.size.includes(sizeFilter);
+                const matchesPrice = !priceFilter || checkPriceRange(product.price, priceFilter);
+                
+                return matchesBrand && matchesSize && matchesPrice;
+            });
+            
+            displayProducts(filteredProducts);
+        }
+
+        // Check if product price is within selected range
+        function checkPriceRange(price, range) {
+            switch(range) {
+                case '0-50': return price < 50;
+                case '50-100': return price >= 50 && price < 100;
+                case '100-150': return price >= 100 && price < 150;
+                case '150+': return price >= 150;
+                default: return true;
+            }
+        }
+
+        // Update user interface based on authentication state
+        function updateUserInterface() {
+            if (!userControls) return;
+            
+            if (state.user) {
+                userControls.innerHTML = `
+                    <div class="user-menu">
+                        <div class="user-avatar">${state.user.firstName.charAt(0)}${state.user.lastName.charAt(0)}</div>
+                        <span>Hello, ${state.user.firstName}</span>
+                        <div class="cart-indicator" onclick="showCart()">
+                            <i class="fas fa-shopping-cart"></i>
+                            ${state.cart.length > 0 ? `<span class="cart-count">${state.cart.length}</span>` : ''}
+                        </div>
+                        <button class="auth-btn outline" onclick="logout()">Logout</button>
+                    </div>
+                `;
+                
+                if (state.isAdmin && adminLink) {
+                    adminLink.style.display = 'block';
+                    updateAdminStats();
+                }
+                
+                if (dashboardGreeting) {
+                    dashboardGreeting.innerHTML = `<p>Welcome back, ${state.user.firstName}!</p>`;
+                }
+                
+                loadUserBookings();
+            } else {
+                userControls.innerHTML = `
+                    <button class="auth-btn outline" data-modal="loginModal">Login</button>
+                    <button class="auth-btn" data-modal="registerModal">Register</button>
+                `;
+                if (adminLink) adminLink.style.display = 'none';
+            }
+        }
+
+        // Show/hide sections
+        function showSection(sectionId) {
+            try {
+                document.querySelectorAll('.dashboard-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                const targetSection = document.getElementById(sectionId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                    window.scrollTo(0, 0);
+                    
+                    // Lazy load content when section is shown
+                    if (sectionId === 'products') {
+                        lazyLoadProducts();
+                    }
+                }
+            } catch (error) {
+                console.error('Error showing section:', error);
+            }
+        }
+
+        // Show modal
+        function showModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'flex';
+            }
+        }
+
+        // Close modal
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Show dashboard tab
+        function showDashboardTab(tabName) {
+            document.querySelectorAll('.dashboard-tab').forEach(tab => {
+                tab.style.display = 'none';
+            });
+            const targetTab = document.getElementById(tabName + 'Tab');
+            if (targetTab) {
+                targetTab.style.display = 'block';
+            }
+            
+            // Update active button
+            document.querySelectorAll('#dashboard .dashboard-nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // Show admin tab
+        function showAdminTab(tabName) {
+            document.querySelectorAll('.admin-tab').forEach(tab => {
+                tab.style.display = 'none';
+            });
+            const targetTab = document.getElementById('admin' + tabName.charAt(0).toUpperCase() + tabName.slice(1) + 'Tab');
+            if (targetTab) {
+                targetTab.style.display = 'block';
+            }
+            
+            // Update active button
+            document.querySelectorAll('#admin .dashboard-nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // Handle login form submission
+        function handleLogin(e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            login(email, password);
+        }
+
+        // Handle register form submission
+        function handleRegister(e) {
+            e.preventDefault();
+            const formData = {
+                firstName: document.getElementById('registerFirstName').value,
+                lastName: document.getElementById('registerLastName').value,
+                email: document.getElementById('registerEmail').value,
+                phone: document.getElementById('registerPhone').value,
+                password: document.getElementById('registerPassword').value,
+                confirmPassword: document.getElementById('registerConfirmPassword').value
+            };
+            register(formData);
+        }
+
+        // Handle booking form submission
+        function handleBooking(e) {
+            e.preventDefault();
+            const formData = {
+                customerName: document.getElementById('customerName').value,
+                customerEmail: document.getElementById('customerEmail').value,
+                customerPhone: document.getElementById('customerPhone').value,
+                serviceType: document.getElementById('serviceType').value,
+                vehicleType: document.getElementById('vehicleType').value,
+                bookingDate: document.getElementById('bookingDate').value,
+                selectedTime: document.getElementById('selectedTime') ? document.getElementById('selectedTime').value : null,
+                bookingTime: document.getElementById('bookingTime') ? document.getElementById('bookingTime').value : null,
+                specialRequirements: document.getElementById('specialRequirements').value
+            };
+            
+            submitBooking(formData);
+        }
+
+        // Handle profile update
+        function handleProfileUpdate(e) {
+            e.preventDefault();
+            showNotification('Profile updated successfully!', 'success');
+        }
+
+        // Login function
+        function login(email, password) {
+            // In a real app, this would be an API call
+            if (email === 'admin@penstyre.com' && password === 'admin123') {
+                state.user = {
+                    firstName: 'Admin',
+                    lastName: 'User',
+                    email: email,
+                    phone: '07779 303 235'
+                };
+                state.isAdmin = true;
+            } else if (email && password) {
+                state.user = {
+                    firstName: 'John',
+                    lastName: 'Doe',
+                    email: email,
+                    phone: '07123 456789'
+                };
+                state.isAdmin = false;
+            } else {
+                showNotification('Please enter email and password', 'error');
+                return false;
+            }
+            
+            StorageManager.save('currentUser', state.user);
+            updateUserInterface();
+            closeModal('loginModal');
+            showNotification('Login successful!', 'success');
+            return true;
+        }
+
+        // Register function
+        function register(userData) {
+            // In a real app, this would be an API call
+            if (userData.password !== userData.confirmPassword) {
+                showNotification('Passwords do not match', 'error');
+                return false;
+            }
+            
+            state.user = {
+                firstName: userData.firstName,
+                lastName: userData.lastName,
+                email: userData.email,
+                phone: userData.phone
+            };
+            
+            StorageManager.save('currentUser', state.user);
+            updateUserInterface();
+            closeModal('registerModal');
+            showNotification('Registration successful!', 'success');
+            return true;
+        }
+
+        // Logout function
+        function logout() {
+            state.user = null;
+            state.isAdmin = false;
+            localStorage.removeItem('currentUser');
+            updateUserInterface();
+            showSection('home');
+            showNotification('Logged out successfully', 'success');
+        }
+
+        // Add to cart function with enhanced UI feedback
+        function addToCart(productId) {
+            if (!state.user) {
+                showNotification('Please login to add items to cart', 'warning');
+                showModal('loginModal');
+                return;
+            }
+            
+            const product = state.products.find(p => p.id === productId);
+            const button = event.target;
+            const originalText = button.innerHTML;
+            
+            // Show loading state
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Adding...';
+            button.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                state.cart.push(product);
+                StorageManager.save('cart', state.cart);
+                
+                // Show success state
+                button.innerHTML = '<i class="fas fa-check"></i> Added!';
+                
+                // Update cart indicator
+                updateUserInterface();
+                
+                // Reset button after delay
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                }, 1500);
+                
+                showNotification(`${product.brand} ${product.name} added to cart`, 'success');
+            }, 600);
+        }
+
+        // Show cart (placeholder function)
+        function showCart() {
+            showNotification('Cart functionality coming soon!', 'info');
+        }
+
+        // Check available time slots for booking
+        function checkAvailableSlots() {
+            const dateInput = document.getElementById('bookingDate');
+            const availabilityIndicator = document.getElementById('dateAvailability');
+            const timeSlotsContainer = document.getElementById('timeSlotsContainer');
+            
+            if (!dateInput.value) return;
+            
+            // Show loading state
+            availabilityIndicator.style.display = 'flex';
+            availabilityIndicator.innerHTML = '<i class="fas fa-circle" style="color: var(--warning)"></i><span>Checking availability...</span>';
+            
+            // Simulate API call to check availability
+            setTimeout(() => {
+                // In a real app, this would check against actual bookings
+                const isAvailable = Math.random() > 0.3; // 70% chance of availability
+                
+                if (isAvailable) {
+                    availabilityIndicator.innerHTML = '<i class="fas fa-circle available"></i><span>Slots available for this date</span>';
+                    
+                    // Show time slots as buttons instead of dropdown
+                    const timeSlots = ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00'];
+                    const unavailableSlots = timeSlots.filter(() => Math.random() > 0.7); // 30% of slots unavailable
+                    
+                    let timeSlotsHTML = '<div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">';
+                    
+                    timeSlots.forEach(slot => {
+                        const isUnavailable = unavailableSlots.includes(slot);
+                        timeSlotsHTML += `
+                            <div class="time-slot ${isUnavailable ? 'unavailable' : ''}" 
+                                 data-time="${slot}">
+                                ${slot}
+                            </div>
+                        `;
+                    });
+                    
+                    timeSlotsHTML += '</div><input type="hidden" id="selectedTime" name="selectedTime" required>';
+                    
+                    timeSlotsContainer.innerHTML = `
+                        <label for="bookingTime">Preferred Time</label>
+                        ${timeSlotsHTML}
+                    `;
+                    
+                    // Add event listeners to time slots
+                    timeSlotsContainer.querySelectorAll('.time-slot:not(.unavailable)').forEach(slot => {
+                        slot.addEventListener('click', function() {
+                            selectTimeSlot(this.getAttribute('data-time'));
+                        });
+                    });
+                } else {
+                    availabilityIndicator.innerHTML = '<i class="fas fa-circle unavailable"></i><span>No availability for this date</span>';
+                }
+            }, 1000);
+        }
+
+        // Select a time slot
+        function selectTimeSlot(time) {
+            // Remove selected class from all time slots
+            document.querySelectorAll('.time-slot').forEach(slot => {
+                slot.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked time slot
+            event.target.classList.add('selected');
+            
+            // Set the hidden input value
+            document.getElementById('selectedTime').value = time;
+        }
+
+        // Submit booking form
+        function submitBooking(formData) {
+            if (!state.user) {
+                showNotification('Please login to book a service', 'warning');
+                showModal('loginModal');
+                return false;
+            }
+            
+            const submitBtn = document.getElementById('submitBookingBtn');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            submitBtn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                const booking = {
+                    id: Date.now(),
+                    customerName: formData.customerName,
+                    customerEmail: formData.customerEmail,
+                    customerPhone: formData.customerPhone,
+                    serviceType: formData.serviceType,
+                    vehicleType: formData.vehicleType,
+                    date: formData.bookingDate,
+                    time: formData.selectedTime || formData.bookingTime,
+                    specialRequirements: formData.specialRequirements,
+                    status: 'pending',
+                    createdAt: new Date().toISOString()
+                };
+                
+                state.bookings.push(booking);
+                StorageManager.save('bookings', state.bookings);
+                
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // Reset form
+                document.getElementById('bookingForm').reset();
+                
+                showNotification('Booking submitted successfully!', 'success');
+                showSection('dashboard');
+                
+                return true;
+            }, 1500);
+        }
+
+        // Load user bookings
+        function loadUserBookings() {
+            if (!state.user || !userBookings) return;
+            
+            userBookings.innerHTML = '';
+            
+            if (state.bookings.length === 0) {
+                userBookings.innerHTML = '<p style="padding: 2rem; text-align: center;">You have no bookings yet.</p>';
+                return;
+            }
+            
+            const userBookingsList = state.bookings.filter(booking => 
+                booking.customerEmail === state.user.email
+            );
+            
+            if (userBookingsList.length === 0) {
+                userBookings.innerHTML = '<p style="padding: 2rem; text-align: center;">You have no bookings yet.</p>';
+                return;
+            }
+            
+            userBookingsList.forEach(booking => {
+                const bookingCard = document.createElement('div');
+                bookingCard.className = 'booking-card';
+                bookingCard.innerHTML = `
+                    <div class="booking-info">
+                        <h4>${formatServiceType(booking.serviceType)}</h4>
+                        <p>Date: ${formatDate(booking.date)} at ${booking.time}</p>
+                        <p>Vehicle: ${formatVehicleType(booking.vehicleType)}</p>
+                        <span class="status-badge status-${booking.status}">${booking.status.charAt(0).toUpperCase() + booking.status.slice(1)}</span>
+                    </div>
+                    <div class="booking-actions">
+                        <button class="action-btn secondary">Reschedule</button>
+                        <button class="action-btn primary" data-section="booking">Book Again</button>
+                    </div>
+                `;
+                userBookings.appendChild(bookingCard);
+            });
+            
+            // Add event listeners to booking buttons
+            userBookings.querySelectorAll('.action-btn.primary[data-section]').forEach(button => {
+                button.addEventListener('click', function() {
+                    const section = this.getAttribute('data-section');
+                    showSection(section);
+                });
+            });
+        }
+
+        // Update admin statistics
+        function updateAdminStats() {
+            if (!state.isAdmin) return;
+            
+            const totalBookings = document.getElementById('totalBookings');
+            const pendingBookings = document.getElementById('pendingBookings');
+            const todayBookings = document.getElementById('todayBookings');
+            const revenue = document.getElementById('revenue');
+            
+            if (totalBookings) totalBookings.textContent = state.bookings.length;
+            if (pendingBookings) pendingBookings.textContent = state.bookings.filter(b => b.status === 'pending').length;
+            
+            const today = new Date().toISOString().split('T')[0];
+            if (todayBookings) todayBookings.textContent = state.bookings.filter(b => b.date === today).length;
+            
+            // Calculate revenue (simplified)
+            const revenueValue = state.bookings.length * 45; // Average booking value
+            if (revenue) revenue.textContent = revenueValue.toFixed(2);
+            
+            // Update admin bookings table
+            updateAdminBookingsTable();
+        }
+
+        // Update admin bookings table
+        function updateAdminBookingsTable() {
+            if (!state.isAdmin || !adminBookingsTable) return;
+            
+            adminBookingsTable.innerHTML = '';
+            
+            if (state.bookings.length === 0) {
+                adminBookingsTable.innerHTML = '<tr><td colspan="6" style="text-align: center;">No bookings found</td></tr>';
+                return;
+            }
+            
+            state.bookings.forEach(booking => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>#${booking.id}</td>
+                    <td>${booking.customerName}</td>
+                    <td>${formatServiceType(booking.serviceType)}</td>
+                    <td>${formatDate(booking.date)} ${booking.time}</td>
+                    <td><span class="status-badge status-${booking.status}">${booking.status.charAt(0).toUpperCase() + booking.status.slice(1)}</span></td>
+                    <td>
+                        <button class="action-btn primary" data-booking-id="${booking.id}" data-action="confirm">Confirm</button>
+                        <button class="action-btn secondary" data-booking-id="${booking.id}" data-action="complete">Complete</button>
+                    </td>
+                `;
+                adminBookingsTable.appendChild(row);
+            });
+            
+            // Add event listeners to action buttons
+            adminBookingsTable.querySelectorAll('.action-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const bookingId = parseInt(this.getAttribute('data-booking-id'));
+                    const action = this.getAttribute('data-action');
+                    updateBookingStatus(bookingId, action === 'confirm' ? 'confirmed' : 'completed');
+                });
+            });
+        }
+
+        // Update booking status
+        function updateBookingStatus(bookingId, status) {
+            const booking = state.bookings.find(b => b.id === bookingId);
+            if (booking) {
+                booking.status = status;
+                StorageManager.save('bookings', state.bookings);
+                updateAdminStats();
+                showNotification(`Booking #${bookingId} ${status}`, 'success');
+            }
+        }
+
+        // Utility functions
+        function formatServiceType(serviceType) {
+            const types = {
+                'tyre-fitting': 'Tyre Fitting',
+                'puncture-repair': 'Puncture Repair',
+                'wheel-alignment': 'Wheel Alignment',
+                'emergency': 'Emergency Service',
+                'other': 'Other Service'
+            };
+            return types[serviceType] || serviceType;
+        }
+
+        function formatVehicleType(vehicleType) {
+            const types = {
+                'car': 'Car',
+                'van': 'Van',
+                'suv': 'SUV/4x4',
+                'motorcycle': 'Motorcycle'
+            };
+            return types[vehicleType] || vehicleType;
+        }
+
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'short', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString('en-GB', options);
+        }
+
+        function showNotification(message, type = 'success') {
+            // Remove any existing notifications
+            const existingNotifications = document.querySelectorAll('.notification');
+            existingNotifications.forEach(notification => notification.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <span>${message}</span>
+                <button onclick="this.parentElement.remove()">&times;</button>
+            `;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                if (notification.parentElement) {
+                    notification.remove();
+                }
+            }, 5000);
+        }
+
+        function showLoadingState(element) {
+            if (element) {
+                element.innerHTML = '<div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Loading...</div>';
+            }
+        }
+
+        // Initialize the application when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>
